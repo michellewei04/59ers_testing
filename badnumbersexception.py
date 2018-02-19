@@ -1,0 +1,2 @@
+class BadNumbersException(Exception):
+    pass
