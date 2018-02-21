@@ -30,12 +30,12 @@ class InputList():
         """
         logger.info('Calculating sum of the list')
         logger.debug('Input list: %s', str(self.list))
-        # try:
-        #     self.check_inputs()
-        # except TypeError:
-        #     logger.error("TypeError in get_sum, must be list of integers")
-        # except ValueError:
-        #     logger.error("ValueError in get_sum, integers must be between -9,000 and 9,000")
+        try:
+            self.check_inputs()
+        except TypeError:
+            logger.error("TypeError in get_sum, must be list of integers")
+        except ValueError:
+            logger.error("ValueError in get_sum, integers must be between -9,000 and 9,000")
         self.check_inputs()
         logger.debug('Output: %s', sum(self.list))
         self.sum = sum(self.list)
@@ -52,12 +52,12 @@ class InputList():
         """
         logger.info('Obtaining min and max of list')
         logger.debug('Input list: %s', str(self.list))
-        # try:
-        #     self.check_inputs()
-        # except TypeError:
-        #     logger.error("TypeError in get_min_max, must be list of integers")
-        # except ValueError:
-        #     logger.error("ValueError in get_min_max, must be between -9,000 and 9,000")
+        try:
+            self.check_inputs()
+        except TypeError:
+            logger.error("TypeError in get_min_max, must be list of integers")
+        except ValueError:
+            logger.error("ValueError in get_min_max, must be between -9,000 and 9,000")
         self.check_inputs()
         np = self.import_modules()
         min_max = (np.amin(self.list), np.amax(self.list))
@@ -77,12 +77,12 @@ class InputList():
         """
         logger.info('Calculating maximum difference in the list')
         logger.debug('Input list: %s', str(self.list))
-        # try:
-        #     self.check_inputs()
-        # except TypeError:
-        #     logger.error("TypeError in get_max_diff, must be list of integers")
-        # except ValueError:
-        #     logger.error("ValueError in get_max_diff, must be between -9,000 and 9,000")
+        try:
+            self.check_inputs()
+        except TypeError:
+            logger.error("TypeError in get_max_diff, must be list of integers")
+        except ValueError:
+            logger.error("ValueError in get_max_diff, must be between -9,000 and 9,000")
         self.check_inputs()
         np = self.import_modules()
         diff_arr = np.diff(self.list)

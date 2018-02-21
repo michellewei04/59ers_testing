@@ -1,7 +1,7 @@
-test\_max\_diff module
+logging\_config module
 ======================
 
-.. automodule:: test_max_diff
+.. automodule:: logging_config
     :members:
     :undoc-members:
     :show-inheritance:

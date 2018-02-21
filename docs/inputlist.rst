@@ -1,7 +1,7 @@
-test\_sum module
+inputlist module
 ================
 
-.. automodule:: test_sum
+.. automodule:: inputlist
     :members:
     :undoc-members:
     :show-inheritance:
