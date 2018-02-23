@@ -19,8 +19,8 @@ def test_import():
     logger.debug('Complete testing import')
 
 
-def test_check_inputs():
-    logger.debug('Begin testing check inputs function')
+def test_setter():
+    logger.debug('Begin testing setter function')
     error_input_list = (12,
                         [1, 2, 3.32],
                         [4, 'GTHC', 2, 333],
@@ -35,7 +35,7 @@ def test_check_inputs():
     # loop over exception triggers and module functions
     for i, l in enumerate(error_input_list):
         with pytest.raises(error_output_list[i]):
-            InputList(list=l)
+            InputList(nums=l)
     logger.debug('Complete testing check inputs function')
 
 
@@ -44,7 +44,7 @@ def test_sum():
     input_lists = ([1, 1],
                    [2, 7001, 5],
                    [-3, 2, 6, 8, 8509])
-    input_lists = [InputList(list=x) for x in input_lists]
+    input_lists = [InputList(nums=x) for x in input_lists]
     output_results = (2, 7008, 8522)
     for i, l in enumerate(input_lists):
         assert l.sum == output_results[i]
@@ -57,7 +57,7 @@ def test_min_max():
     input_lists = ([1, 1],
                    [3, 4, 9],
                    [7, 10, -2, -2])
-    input_lists = [InputList(list=x) for x in input_lists]
+    input_lists = [InputList(nums=x) for x in input_lists]
     output_results = ((1, 1),
                       (3, 9),
                       (-2, 10))
@@ -72,7 +72,7 @@ def test_max_diff():
     input_lists = ([1, 1, 3],
                    [-1, 3, -16],
                    [5, 5, 5, 5, 5])
-    input_lists = [InputList(list=x) for x in input_lists]
+    input_lists = [InputList(nums=x) for x in input_lists]
     output_results = (2, 4, 0)
     for i, l in enumerate(input_lists):
         assert l.maxdiff == output_results[i]
