@@ -1,0 +1,209 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>inputlist module &#8212; yw145_Object_Oriented_Programming 3.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-inputlist">
+<span id="inputlist-module"></span><h1>inputlist module<a class="headerlink" href="#module-inputlist" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="inputlist.InputList">
+<em class="property">class </em><code class="descclassname">inputlist.</code><code class="descname">InputList</code><span class="sig-paren">(</span><em>list=None</em>, <em>sum=None</em>, <em>minmax=None</em>, <em>maxdiff=None</em><span class="sig-paren">)</span><a class="headerlink" href="#inputlist.InputList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="inputlist.InputList.check_inputs">
+<code class="descname">check_inputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inputlist.InputList.check_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if input list fits desired format</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> – list of n integers between -9,000 and 9,000</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>TypeError</strong> – Input must be lists</li>
+<li><strong>TypeError</strong> – Input elements must be integers</li>
+<li><strong>ValueError</strong> – All input elements must be between -9,000 and 9,000 (inclusive)</li>
+<li><a class="reference internal" href="badnumbersexception.html#badnumbersexception.BadNumbersException" title="badnumbersexception.BadNumbersException"><strong>BadNumbersException</strong></a> – Numbers 123 and 321 cannot be in same list</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="inputlist.InputList.get_max_diff">
+<code class="descname">get_max_diff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inputlist.InputList.get_max_diff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns maximum difference between consecutive elements in input list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> – list of n integers between -9,000 and 9,000</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">maximum difference d defined by d = self[i+1] - self[i] for i = 0 to n-1</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ImportError</strong> – If Numpy is not installed</li>
+<li><strong>TypeError</strong> – Input must be lists</li>
+<li><strong>TypeError</strong> – Input elements must be integers</li>
+<li><strong>ValueError</strong> – All input elements must be between -9,000 and 9,000 (inclusive)</li>
+<li><a class="reference internal" href="badnumbersexception.html#badnumbersexception.BadNumbersException" title="badnumbersexception.BadNumbersException"><strong>BadNumbersException</strong></a> – Numbers 123 and 321 cannot be in same list</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="inputlist.InputList.get_min_max">
+<code class="descname">get_min_max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inputlist.InputList.get_min_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns min and max in a list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> – (int) list to get min and max of</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">min and max of list in a tuple</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>TypeError</strong> – Input must be lists</li>
+<li><strong>TypeError</strong> – Input elements must be integers</li>
+<li><strong>ValueError</strong> – All input elements must be between -9,000 and 9,000 (inclusive)</li>
+<li><a class="reference internal" href="badnumbersexception.html#badnumbersexception.BadNumbersException" title="badnumbersexception.BadNumbersException"><strong>BadNumbersException</strong></a> – Numbers 123 and 321 cannot be in same list</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="inputlist.InputList.get_sum">
+<code class="descname">get_sum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inputlist.InputList.get_sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sum of a list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> – list of n integers between -9,000 and 9,000</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">sum of all the n integers in the list</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>TypeError</strong> – Input must be lists</li>
+<li><strong>TypeError</strong> – Input elements must be integers</li>
+<li><strong>ValueError</strong> – All input elements must be between -9,000 and 9,000 (inclusive)</li>
+<li><a class="reference internal" href="badnumbersexception.html#badnumbersexception.BadNumbersException" title="badnumbersexception.BadNumbersException"><strong>BadNumbersException</strong></a> – Numbers 123 and 321 cannot be in same list</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="inputlist.InputList.import_modules">
+<em class="property">static </em><code class="descname">import_modules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inputlist.InputList.import_modules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports required module (Numpy)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the module Numpy</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Michelle Wei, Harvey Shi, Edward Liang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/inputlist.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
