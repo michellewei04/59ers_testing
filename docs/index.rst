@@ -9,10 +9,10 @@ Welcome to yw145_Object_Oriented_Programming's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-.. automodule:: badnumbersexception.rst
-.. automodule:: logging_config.rst
-.. automodule:: test_operations.rst
-.. automodule:: inputlist.rst
+.. automodule:: badnumbersexception
+.. automodule:: logging_config
+.. automodule:: test_operations
+.. automodule:: inputlist
 
 Indices and tables
 ==================
