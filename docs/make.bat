@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=yw145OOP
+set SPHINXPROJ=yw145_Object_Oriented_Programming
 
 if "%1" == "" goto help
 
